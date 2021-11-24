@@ -1,0 +1,19 @@
+<div class="container">
+    <form [formGroup]="formulario" novalidate (ngSubmit)="onSubmit()">
+        <div>
+            <mat-form-field appearance="legacy">
+                <mat-label>Nombre</mat-label>
+                <input matInput placeholder="Ingrese su Nombre" formControlName= "nombre">
+              </mat-form-field>
+              <mat-form-field appearance="legacy">
+                <mat-label>Descripcion</mat-label>
+                <input matInput placeholder="Ingrese su Descripcion" formControlName= "descripcion">
+              </mat-form-field>
+        </div>
+        <div>
+            <button mat-icon-button type="submit" [disabled]= "formulario.invalid">
+                    <mat-icon>note_add</mat-icon>       
+              </button>
+        </div>
+    </form>
+</div>
